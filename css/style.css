@@ -1,0 +1,264 @@
+/* css/style.css */
+:root {
+    color-scheme: light;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --primary: #0d6efd;
+    --surface: #ffffff;
+    --surface-soft: #f8fbff;
+    --text-soft: #6c757d;
+    --shadow-soft: 0 24px 80px rgba(13, 110, 253, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at top, #eef5ff 0%, #f8f9fa 55%, #ffffff 100%);
+    color: #212529;
+}
+
+.navbar-gradient {
+    background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.dashboard-header {
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.12), rgba(103, 116, 239, 0.08));
+}
+
+.stats-card {
+    border-radius: 1.15rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-soft);
+}
+
+.card {
+    border: none;
+    border-radius: 1.1rem;
+}
+
+.card-body {
+    position: relative;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table-hover tbody tr:hover {
+    background: rgba(13, 110, 253, 0.05);
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+.search-input-group {
+    border-radius: 0.9rem;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(13, 110, 253, 0.08);
+}
+
+.search-input-group .form-control,
+.search-input-group .btn {
+    border: none;
+}
+
+.search-input {
+    min-height: 52px;
+}
+
+.btn-primary {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 30px rgba(13, 110, 253, 0.18);
+}
+
+.footer {
+    background: #ffffff;
+}
+
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(14, 48, 80, 0.22);
+    z-index: 1100;
+}
+
+.loading-spinner {
+    width: min(320px, calc(100% - 48px));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.empty-state-card {
+    border: 1px dashed rgba(13, 110, 253, 0.25);
+}
+
+.empty-state-card .display-4 {
+    color: #0d6efd;
+}
+
+.page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.page-link {
+    border-radius: 0.75rem;
+}
+
+@media (max-width: 767.98px) {
+    .navbar .navbar-nav {
+        margin-top: 1rem;
+    }
+
+    .search-input {
+        min-height: 48px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .table-responsive {
+        font-size: 0.95rem;
+    }
+
+    .dashboard-header {
+        padding: 2rem 1.25rem;
+    }
+}
+
+.dark-mode {
+    background: #111827;
+    color: #e5e7eb;
+}
+
+.dark-mode .navbar-gradient {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.dark-mode .card,
+.dark-mode .empty-state-card,
+.dark-mode .dashboard-header {
+    background: #1f2937;
+    border-color: rgba(148, 163, 184, 0.16);
+}
+
+.dark-mode .card-body,
+.dark-mode .table-responsive,
+.dark-mode .search-input,
+.dark-mode .page-link,
+.dark-mode .btn-outline-secondary {
+    background: #111827;
+}
+
+.dark-mode .table-hover tbody tr:hover {
+    background: rgba(96, 165, 250, 0.16);
+}
+
+.dark-mode .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(148, 163, 184, 0.06);
+}
+
+.dark-mode .form-control,
+.dark-mode .form-select {
+    background: #111827;
+    color: #e5e7eb;
+    border-color: rgba(148, 163, 184, 0.24);
+}
+
+.dark-mode .page-link {
+    color: #cbd5e1;
+    background: #1f2937;
+    border-color: rgba(148, 163, 184, 0.16);
+}
+
+.dark-mode .page-item.active .page-link {
+    background-color: #0ea5e9;
+    border-color: #0ea5e9;
+}
+
+.dark-mode .alert {
+    background: #0f172a;
+    color: #e2e8f0;
+    border-color: rgba(148, 163, 184, 0.16);
+}
+
+.dark-mode .btn-primary {
+    background-color: #0284c7;
+    border-color: #0284c7;
+}
+
+.mark-highlight {
+    background: #fffbcc;
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.25rem;
+}
+
+.dark-mode .mark-highlight {
+    background: rgba(248, 113, 113, 0.18);
+}
+
+.chart-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.chart-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+}
+
+.password-strength {
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.password-strength-bar {
+    width: 0;
+    height: 100%;
+    transition: width 0.2s ease, background-color 0.2s ease;
+}
+
+.password-strength-bar.weak { background: #dc3545; }
+.password-strength-bar.medium { background: #ffc107; }
+.password-strength-bar.strong { background: #198754; }
